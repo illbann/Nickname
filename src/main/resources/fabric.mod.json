@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "nickname",
+	"version": "${version}",
+	"name": "nickname",
+	"description": "게임 안에서 플레이어 닉네임을 변경하고 저장합니다.",
+	"authors": [
+		"illbann"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/nickname/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.illbann.nickname.Nickname"
+		],
+		"client": [
+			"com.illbann.nickname.client.NicknameClient"
+		]
+	},
+	"mixins": [
+		"nickname.mixins.json",
+		{
+			"config": "nickname.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}

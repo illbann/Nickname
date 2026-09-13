@@ -1,0 +1,15 @@
+{
+	"required": true,
+	"package": "com.illbann.nickname.client.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"client": [
+		"PlayerClientMixin",
+		"PlayerInfoClientMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
